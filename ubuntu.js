@@ -3,21 +3,7 @@ function get_url() {
 }
 
 function create_py_script(_script_essentials) {
-    if(flathub-id in _script_essentials.keys()){
-        // TODO: add flatpak apps from flathub
-    }
-
-    if(apt-repo in _script_essentials.keys()){
-        // TODO: add apt repositories
-    }
-
-    if (apt-ppa in _script_essentials.keys()){
-        // TODO: add apt repositories from launchpad
-    }
-
-    if (apt-pkg in _script_essentials.keys()){
-        // TODO: add apt packages
-    }
+    // TODO: Implementation
 }
 
 function parse_url() {
@@ -34,19 +20,22 @@ function parse_url() {
             }
             _script_essentials[_key] = _value;
         }
-        let py_file = create_py_script(_script_essentials);
+        // let py_file = create_py_script(_script_essentials);
+        console.log(_script_essentials); // TODO: Remove after implementation of create_py_script.
     }
 }
 
 function handle_submit() {
-    let rem_snap = document.getElementById('rem-snap');
-    let flatpak = document.getElementById('flatpak');
-    let flathub = document.getElementById('flathub');
+    let rem_snap = document.getElementById('rem-snap').checked;
+    let flatpak = document.getElementById('flatpak').checked;
+    let flathub = document.getElementById('flathub').checked;
     let flathub_id = document.getElementById("flathub-id").value;
     let non_ppa_repos = document.getElementById("apt-repo").value;
     let ppa_repos = document.getElementById("apt-ppa").value;
     let apt_pkgs = document.getElementById("apt-pkg").value;
     let curr_url = get_url();
-    curr_url += '?rem_snap=' + rem_snap.toString() + '&flatpak=' + flatpak.toString() + '&flathub='+ flathub.toString() + '&flathub_id=' + flathub_id + '&non_ppa_repos=' + non_ppa_repos + '&ppa_repos=' + ppa_repos + '&apt_pkgs=' + apt_pkgs;
+    curr_url = curr_url.split('?')[0] + '?rem_snap=' + rem_snap.toString() + '&flatpak=' + flatpak.toString() + '&flathub='+ flathub.toString() + '&flathub_id=' + flathub_id + '&non_ppa_repos=' + non_ppa_repos + '&ppa_repos=' + ppa_repos + '&apt_pkgs=' + apt_pkgs;
     window.location.replace(curr_url);
 }
+
+parse_url()

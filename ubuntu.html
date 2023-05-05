@@ -62,23 +62,23 @@
                             <span class="colorify">Install flathub (Flatpak will be installed regardless of above
                                 option)</span>
                         </label> <br>
-                        <label for="flathub-id">Packages to be installed <b>(flathub ids to be provided, ignored if flathub is NOT to be installed)</b></label> <br>
+                        <label for="flathub-id">Packages to be installed. <b>Use comma(,) as separator.</b> <b>(flathub ids to be provided, ignored if flathub is NOT to be installed)</b></label> <br>
 
                         <textarea class="colorify" id="flathub-id" name="flathub-id" rows="4" cols="50" style="border-color: aliceblue;" placeholder="Add flatpak package names found in flathub here. Use space as separator."></textarea> <br>
 
-                        <label for="apt-repo">Add urls to repositories NOT hosted in Launchpad to be added</label> <br>
+                        <label for="apt-repo">Add urls to repositories NOT hosted in Launchpad to be added. <b>Use comma(,) as separator.</b></label> <br>
 
                         <textarea class="colorify" style="border-color: aliceblue;" name="apt-repo" id="apt-repo" cols="30" rows="10" placeholder="Do not add ppa: repos here. Use comma(,) as separator."></textarea> <br>
 
-                        <label for="apt-ppa">Add ppa: urls to be installed for apt:</label> <br>
+                        <label for="apt-ppa">Add ppa: urls to be installed for apt. <b>Use comma(,) as separator.</b></label> <br>
 
-                        <textarea class="colorify" style="border-color: aliceblue;" name="apt-ppa" id="apt-ppa" cols="30" rows="10" placeholder="Add all those ppa: repos here. Use space as separator."></textarea> <br>
+                        <textarea class="colorify" style="border-color: aliceblue;" name="apt-ppa" id="apt-ppa" cols="30" rows="10" placeholder="Add all those ppa: repos here. Use comma(,) as separator."></textarea> <br>
 
-                        <label for="apt-pkg">Additional packages to be installed via apt:</label> <br>
+                        <label for="apt-pkg">Additional packages to be installed via apt. <b>Use comma(,) as separator.</b></label> <br>
 
-                        <textarea class="colorify" style="border-color: aliceblue;" name="apt-pkg" id="apt-pkg" cols="30" rows="10" placeholder="Add apt package names here. Use space as separator."></textarea> <br>
+                        <textarea class="colorify" style="border-color: aliceblue;" name="apt-pkg" id="apt-pkg" cols="30" rows="10" placeholder="Add apt package names here. Use comma(,) as separator."></textarea> <br>
 
-                        <button class="waves-effect waves-light btn" id="scriptify" onclick="handle_submit">Get a script</button> <button class="waves-effect waves-light btn" type="reset">Clear off</button> <br>
+                        <button class="waves-effect waves-light btn" id="scriptify" onclick="handle_submit()">Get a script</button> <button class="waves-effect waves-light btn" type="reset">Clear off</button> <br>
                     </form>
                 </div>
             </div>
