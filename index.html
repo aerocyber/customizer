@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello, World!</title>
+  <!--Materialize CSS and JS-->
+  <link rel="stylesheet" href="materialize.min.css" />
+  <script src="materialize.min.js"></script>
+  <!--Google's Material icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="#!" class="brand-logo">Customizer</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <!-- <li><a href="fedora.html">Fedora</a></li> --> <!--TODO: Fedora-->
+          <li><a href="home.html">Home</a></li>
+          <li><a href="ubuntu.html">Ubuntu</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <!-- <li><a href="fedora.html">Fedora</a></li> --> <!--TODO: Fedora-->
+    <li><a href="home.html">Home</a></li>
+    <li><a href="ubuntu.html">Ubuntu</a></li>
+  </ul>
+
+  <div class="container">
+
+    <div class="row s2" style="gap:20px; margin-top: 10px;">
+      <div class="col s12 m6">
+        <div class="card" style="border-radius: 10px;">
+          <div class="card-image">
+            <img src="Ubuntu_logo_orange.png" alt="Ubuntu logo">
+            <span class="card-title">Ubuntu</span>
+          </div>
+          <div class="card-content">
+            <p>Ubuntu is a very versatile OS that has a very huge impact in the open-source community. 
+              Choose Ubuntu Customizer.</p>
+          </div>
+          <div class="card-action">
+            <a href="ubuntu.html">Ubuntu Package Customization Suite</a>
+          </div>
+        </div>
+      </div>
+    <!-- </div>
+
+    <div class="row s2"> -->
+      <!-- 
+        TODO: Fedora Package and Group Customizer
+        <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="fedora_logo.png" alt="Fedora logo">
+            <span class="card-title">Fedora</span>
+          </div>
+          <div class="card-content">
+            <p>An OS supported by RedHat and known for stock GNOME, pushing forward to new horizons!
+              Choose Fedora Customizer
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="fedora.html">Fedora Package Customization Suite</a>
+          </div>
+        </div>
+      </div>
+     -->
+    </div>
+
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.borderify {
+    border-top: 30px;
+    border-bottom: 10px;
+    border-right: 10px;
+    border-left: 10px;
+    border-color: green;
+    border-radius: 20px;
+}
+
+.body {
+    background-color: coral;
+}
