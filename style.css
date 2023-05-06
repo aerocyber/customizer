@@ -1,0 +1,81 @@
+body {
+    background-color: #37474f;
+    color: #fffde7;
+    border-radius: 20px;
+}
+
+.colorify {
+    color: #fff;
+}
+
+.inner-body {
+    background-color: #f3e5f5;
+    color: #000;
+    border-radius: 20px;
+}
+
+.inner-nav {
+    background-color: #a7ffeb;
+    color: #000;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.customizer-form {
+    background-color: #37474f;
+    color: #fff;
+}
+
+/* placeholders */
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fafafa;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fafafa;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fafafa;
+}
+
+/* Scrollbar start */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 20px;
+}
+
+/* Scrollbar end */
+
+.card-io {
+    border-radius: 20px;
+}
+
+.button {
+    background-color: #37474f;
+    color: #EEEEEE;
+}
