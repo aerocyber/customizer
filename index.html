@@ -11,37 +11,39 @@
   <script src="materialize.min.js"></script>
   <!--Google's Material icons-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Custom styles-->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <nav>
+  <nav class="inner-nav">
     <div class="nav-wrapper">
       <div class="container">
-        <a href="#!" class="brand-logo">Customizer</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#!" class="brand-logo" style="color: #000;">Customizer</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i style="color: #000;" class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <!-- <li><a href="fedora.html">Fedora</a></li> --> <!--TODO: Fedora-->
-          <li><a href="home.html">Home</a></li>
-          <li><a href="ubuntu.html">Ubuntu</a></li>
+          <li><a style="color: #000;" href="index.html">Home</a></li>
+          <li><a style="color: #000;" href="ubuntu.html">Ubuntu</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <ul class="sidenav" id="mobile-demo">
+  <ul class="sidenav inner-nav" id="mobile-demo">
     <!-- <li><a href="fedora.html">Fedora</a></li> --> <!--TODO: Fedora-->
-    <li><a href="home.html">Home</a></li>
-    <li><a href="ubuntu.html">Ubuntu</a></li>
+    <li><a style="color: #000;" href="index.html">Home</a></li>
+    <li><a style="color: #000;" href="ubuntu.html">Ubuntu</a></li>
   </ul>
 
   <div class="container">
 
     <div class="row s2" style="gap:20px; margin-top: 10px;">
       <div class="col s12 m6">
-        <div class="card" style="border-radius: 10px;">
+        <div class="card inner-body" style="border-radius: 10px;">
           <div class="card-image">
             <img src="Ubuntu_logo_orange.png" alt="Ubuntu logo">
-            <span class="card-title">Ubuntu</span>
+            <span class="card-title" style="color: #000;">Ubuntu</span>
           </div>
           <div class="card-content">
             <p>Ubuntu is a very versatile OS that has a very huge impact in the open-source community. 
@@ -49,6 +51,7 @@
           </div>
           <div class="card-action">
             <a href="ubuntu.html">Ubuntu Package Customization Suite</a>
+            <a href="https://ubuntu.com" target="_blank" rel="noopener noreferrer">Get Ubuntu</a>
           </div>
         </div>
       </div>

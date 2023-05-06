@@ -12,73 +12,69 @@
     <script src="materialize.min.js"></script>
     <!--Google's Material icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <style>
-        .colorify {
-            color: #c5e1a5
-        }
-    </style>
+    <!--Custom styles-->
+    <link rel="stylesheet" href="style.css">
     <script src="ubuntu.js"></script>
 </head>
 
 <body>
-    <nav>
+    <nav class="inner-nav">
         <div class="nav-wrapper">
             <div class="container">
-                <a href="#!" class="brand-logo">Customizer</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#!" class="brand-logo" style="color: #000;">Customizer</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger" style="color: #000;"><i class="material-icons" style="color: #000;">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <!-- <li><a href="fedora.html">Fedora</a></li>  --> <!--TODO: Fedora-->
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="ubuntu.html">Ubuntu</a></li>
+                    <li><a href="index.html" style="color: #000;">Home</a></li>
+                    <li><a href="ubuntu.html" style="color: #000;">Ubuntu</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <ul class="sidenav" id="mobile-demo">
+    <ul class="sidenav inner-nav" id="mobile-demo">
         <!-- <li><a href="fedora.html">Fedora</a></li> --> <!--TODO: Fedora-->
-        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="ubuntu.html">Ubuntu</a></li>
     </ul>
 
     <div class="container">
 
-        <div class="card-panel red lighten-1">
+        <div class="card-panel inner-body">
             <div class="container">
                 <h1>Ubuntu Customizer</h1>
-                <div class="card-panel indigo lighten-1">
+                <div class="card-panel customizer-form">
                     <form name="ubuntu-customizer">
                         <label for="rem-snap">
-                            <input type="checkbox" name="rem-snap" id="rem-snap" />
-                            <span class="colorify">Remove snap</span>
+                            <input type="checkbox" name="rem-snap" id="rem-snap" class="filled-in" />
+                            <span class="colorify">Remove snap and make it not installable</span>
                         </label> <br>
                         <label for="flatpak">
-                            <input type="checkbox" name="flatpak" id="flatpak" />
+                            <input type="checkbox" name="flatpak" id="flatpak" class="filled-in" />
                             <span class="colorify">Install flatpak</span>
                         </label> <br>
                         <label for="flathub">
-                            <input type="checkbox" name="flathub" id="flathub" />
+                            <input type="checkbox" name="flathub" id="flathub" class="filled-in" />
                             <span class="colorify">Install flathub (Flatpak will be installed regardless of above
                                 option)</span>
                         </label> <br>
-                        <label for="flathub-id">Packages to be installed. <b>Use comma(,) as separator.</b> <b>(flathub ids to be provided, ignored if flathub is NOT to be installed)</b></label> <br>
+                        <label for="flathub-id" style="color: #fff; font-size: 13px;">Packages to be installed. <b>Use comma(,) as separator.</b> <b>(flathub ids to be provided, ignored if flathub is NOT to be installed)</b></label> <br>
 
-                        <textarea class="colorify" id="flathub-id" name="flathub-id" rows="4" cols="50" style="border-color: aliceblue;" placeholder="Add flatpak package names found in flathub here. Use space as separator."></textarea> <br>
+                        <textarea class="colorify" id="flathub-id" name="flathub-id" rows="4" cols="50" style="border-color: aliceblue; color: #fff; font-size: 16px;" placeholder="Add flatpak package names found in flathub here. Use space as separator."></textarea> <br>
 
-                        <label for="apt-repo">Add urls to repositories NOT hosted in Launchpad to be added. <b>Use comma(,) as separator.</b></label> <br>
+                        <!-- <label style="color: #fff; font-size: 13px;" for="apt-repo">Add urls to repositories NOT hosted in Launchpad to be added. <b>Use comma(,) as separator.</b></label> <br>
 
-                        <textarea class="colorify" style="border-color: aliceblue;" name="apt-repo" id="apt-repo" cols="30" rows="10" placeholder="Do not add ppa: repos here. Use comma(,) as separator."></textarea> <br>
+                        <textarea class="colorify" style="border-color: aliceblue; color: #fff; font-size: 16px;" name="apt-repo" id="apt-repo" cols="30" rows="10" placeholder="Do not add ppa: repos here. Use comma(,) as separator."></textarea> <br> -->
 
-                        <label for="apt-ppa">Add ppa: urls to be installed for apt. <b>Use comma(,) as separator.</b></label> <br>
+                        <label style="color: #fff; font-size: 13px;" for="apt-ppa">Add ppa: urls to be installed for apt. <b>Use comma(,) as separator.</b></label> <br>
 
-                        <textarea class="colorify" style="border-color: aliceblue;" name="apt-ppa" id="apt-ppa" cols="30" rows="10" placeholder="Add all those ppa: repos here. Use comma(,) as separator."></textarea> <br>
+                        <textarea class="colorify" style="border-color: aliceblue; color: #fff; font-size: 16px;" name="apt-ppa" id="apt-ppa" cols="30" rows="10" placeholder="Add all those ppa: repos here. Use comma(,) as separator."></textarea> <br>
 
-                        <label for="apt-pkg">Additional packages to be installed via apt. <b>Use comma(,) as separator.</b></label> <br>
+                        <label style="color: #fff; font-size: 13px;" for="apt-pkg">Additional packages to be installed via apt. <b>Use comma(,) as separator.</b></label> <br>
 
-                        <textarea class="colorify" style="border-color: aliceblue;" name="apt-pkg" id="apt-pkg" cols="30" rows="10" placeholder="Add apt package names here. Use comma(,) as separator."></textarea> <br>
+                        <textarea class="colorify" style="border-color: aliceblue; color: #fff; font-size: 16px;" name="apt-pkg" id="apt-pkg" cols="30" rows="10" placeholder="Add apt package names here. Use comma(,) as separator."></textarea> <br>
 
-                        <button class="waves-effect waves-light btn" id="scriptify" onclick="handle_submit()">Get a script</button> <button class="waves-effect waves-light btn" type="reset">Clear off</button> <br>
+                        <button class="waves-effect waves-light btn button" id="scriptify" onclick="handle_submit()">Get a script</button> <button class="waves-effect waves-light btn button" type="reset">Clear off</button> <br>
                     </form>
                 </div>
             </div>
